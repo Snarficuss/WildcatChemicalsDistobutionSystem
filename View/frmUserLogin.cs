@@ -26,7 +26,7 @@ namespace WildcatChemicalsDistrobutionAndTrackingSystem
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            clsUsers.username = "";
+            clsUsers.username = ""; // clears the current user's username in case the user logged out and another logged in.
             clsUsers.password = "";
 
             string username = "Admin";

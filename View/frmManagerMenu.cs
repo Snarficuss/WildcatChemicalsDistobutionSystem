@@ -18,14 +18,14 @@ namespace WildcatChemicalsDistrobutionAndTrackingSystem.View
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnViewEvent_Click(object sender, EventArgs e)
         {
             frmCalendar frmCal = new frmCalendar();
             frmCal.Show();
            // this.Close();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnCreateEvent_Click(object sender, EventArgs e)
         {
             frmShipmentView nshipment = new frmShipmentView();
             nshipment.Show();
@@ -35,6 +35,13 @@ namespace WildcatChemicalsDistrobutionAndTrackingSystem.View
         private void frmManagerMenu_Load(object sender, EventArgs e)
         {
             lblSignedIn.Text = $"Signed in as: {clsUsers.username}";
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            frmLogin login = new frmLogin();
+            login.Show();
+            this.Close();
         }
     }
 }

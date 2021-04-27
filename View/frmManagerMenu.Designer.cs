@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.lblSignedIn = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.btnViewEvent = new System.Windows.Forms.Button();
+            this.btnManageEvents = new System.Windows.Forms.Button();
+            this.btnCreateEvent = new System.Windows.Forms.Button();
+            this.btnManageInventory = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblSignedIn
@@ -46,68 +46,69 @@
             this.lblSignedIn.TabIndex = 0;
             this.lblSignedIn.Text = "Signed in as: ";
             // 
-            // button1
+            // btnLogout
             // 
-            this.button1.Location = new System.Drawing.Point(9, 378);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 28);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Logout";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnLogout.Location = new System.Drawing.Point(9, 378);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(75, 28);
+            this.btnLogout.TabIndex = 1;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // button2
+            // btnViewEvent
             // 
-            this.button2.Location = new System.Drawing.Point(100, 76);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(128, 40);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "View Event";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnViewEvent.Location = new System.Drawing.Point(100, 76);
+            this.btnViewEvent.Margin = new System.Windows.Forms.Padding(2);
+            this.btnViewEvent.Name = "btnViewEvent";
+            this.btnViewEvent.Size = new System.Drawing.Size(128, 40);
+            this.btnViewEvent.TabIndex = 2;
+            this.btnViewEvent.Text = "View Event";
+            this.btnViewEvent.UseVisualStyleBackColor = true;
+            this.btnViewEvent.Click += new System.EventHandler(this.btnViewEvent_Click);
             // 
-            // button3
+            // btnManageEvents
             // 
-            this.button3.Location = new System.Drawing.Point(100, 268);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(128, 40);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Manage Events";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnManageEvents.Location = new System.Drawing.Point(100, 268);
+            this.btnManageEvents.Margin = new System.Windows.Forms.Padding(2);
+            this.btnManageEvents.Name = "btnManageEvents";
+            this.btnManageEvents.Size = new System.Drawing.Size(128, 40);
+            this.btnManageEvents.TabIndex = 3;
+            this.btnManageEvents.Text = "Manage Events";
+            this.btnManageEvents.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnCreateEvent
             // 
-            this.button4.Location = new System.Drawing.Point(100, 136);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(128, 40);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Create Event";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnCreateEvent.Location = new System.Drawing.Point(100, 136);
+            this.btnCreateEvent.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCreateEvent.Name = "btnCreateEvent";
+            this.btnCreateEvent.Size = new System.Drawing.Size(128, 40);
+            this.btnCreateEvent.TabIndex = 4;
+            this.btnCreateEvent.Text = "Create Event";
+            this.btnCreateEvent.UseVisualStyleBackColor = true;
+            this.btnCreateEvent.Click += new System.EventHandler(this.btnCreateEvent_Click);
             // 
-            // button5
+            // btnManageInventory
             // 
-            this.button5.Location = new System.Drawing.Point(100, 201);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(128, 40);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Manage Inventory";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnManageInventory.Location = new System.Drawing.Point(100, 201);
+            this.btnManageInventory.Margin = new System.Windows.Forms.Padding(2);
+            this.btnManageInventory.Name = "btnManageInventory";
+            this.btnManageInventory.Size = new System.Drawing.Size(128, 40);
+            this.btnManageInventory.TabIndex = 5;
+            this.btnManageInventory.Text = "Manage Inventory";
+            this.btnManageInventory.UseVisualStyleBackColor = true;
             // 
             // frmManagerMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(355, 415);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnManageInventory);
+            this.Controls.Add(this.btnCreateEvent);
+            this.Controls.Add(this.btnManageEvents);
+            this.Controls.Add(this.btnViewEvent);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.lblSignedIn);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmManagerMenu";
@@ -121,10 +122,10 @@
         #endregion
 
         private System.Windows.Forms.Label lblSignedIn;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnViewEvent;
+        private System.Windows.Forms.Button btnManageEvents;
+        private System.Windows.Forms.Button btnCreateEvent;
+        private System.Windows.Forms.Button btnManageInventory;
     }
 }
